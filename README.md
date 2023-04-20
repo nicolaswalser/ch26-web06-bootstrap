@@ -1,2 +1,5 @@
 # ch26-web06-bootstrap
-Use of bootstrap for responsive web development
+
+<h2> Generation Mexico </h2>
+<br>
+Use of Bootstrap for responsive Web Development
