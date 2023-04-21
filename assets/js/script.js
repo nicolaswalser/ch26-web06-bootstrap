@@ -26,3 +26,8 @@ function resetColors() {
     element.style.color = "black";
   }
 }
+
+function promptAndChange() {
+  const newName = prompt("Enter your name:");
+  document.getElementById("yourName").innerHTML = "Your name is: " + newName;
+}
