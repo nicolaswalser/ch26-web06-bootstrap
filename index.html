@@ -67,7 +67,11 @@
                 Projects
               </a>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Tell me your name</a></li>
+                <li>
+                  <a class="dropdown-item" href="assets/html/myname.html"
+                    >Tell me your name</a
+                  >
+                </li>
                 <li>
                   <a class="dropdown-item disabled" href="#">Calculator</a>
                 </li>
@@ -280,22 +284,64 @@
     <div class="container">
       <div class="row justify-content-center mt-4">
         <div class="col-5 text-center">
-          <p id="myName" onclick="changeColorToRed()">My name?</p>
+          <p id="myName" class="text-color" onclick="changeColorToOriginal()">
+            My name?
+          </p>
         </div>
       </div>
       <!-- Buttons that interact -->
       <div class="row">
         <div class="col">
-          <button type="button" class="btn btn-success">Success</button>
+          <button
+            type="button"
+            class="btn btn-danger"
+            onclick="changeColorTo('red')"
+          >
+            Change name to:
+          </button>
         </div>
         <div class="col">
-          <button type="button" class="btn btn-danger">Danger</button>
+          <button
+            type="button"
+            class="btn btn-primary"
+            onclick="changeColorTo('blue')"
+          >
+            Change Name to:
+          </button>
         </div>
         <div class="col">
-          <button type="button" class="btn btn-warning">Warning</button>
+          <button
+            type="button"
+            class="btn btn-success"
+            onclick="changeColorTo('green')"
+          >
+            Change Name to:
+          </button>
         </div>
       </div>
     </div>
+    <br />
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col text-color" onclick="changeTextColor('red', this)">
+          <p>Turn to: Red</p>
+        </div>
+        <div class="col text-color" onclick="changeTextColor('blue', this)">
+          <p>Turn to: Blue</p>
+        </div>
+        <div class="col text-color" onclick="changeTextColor('green', this)">
+          <p>Turn to: Green</p>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-5 text-center">
+          <button type="button" onclick="resetColors()" class="btn btn-dark">
+            Reset
+          </button>
+        </div>
+      </div>
+    </div>
+
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
       <path
         fill="#212529"
