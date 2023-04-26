@@ -31,8 +31,7 @@ function promptAndChange() {
   const newName = prompt("Enter your name:");
   document.getElementById("yourName").innerHTML = "Your name is: " + newName;
 }
-
-function performOperation(operation) {
+const performOperation = (operation) => {
   const num1 = parseFloat(document.getElementById("num1").value);
   const num2 = parseFloat(document.getElementById("num2").value);
   let result;
@@ -53,4 +52,4 @@ function performOperation(operation) {
       result = "Invalid operation";
   }
   document.getElementById("result").value = result;
-}
+};
