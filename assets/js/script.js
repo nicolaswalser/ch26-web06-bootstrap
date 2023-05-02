@@ -54,3 +54,32 @@ function performOperation(operation) {
   }
   document.getElementById("result").value = result;
 }
+
+// Pick a number 1 - 100
+function guessNumber() {
+  let min = 1;
+  let max = 100;
+  let guess;
+  let result = document.getElementById("result");
+
+  while (min <= max) {
+    guess = Math.floor((min + max) / 2);
+
+    let response = confirm(`Is your number ${guess}?`);
+
+    if (response) {
+      result.innerText = `Your number is ${guess}!`;
+      return;
+    } else {
+      response = confirm(`Is your number higher than ${guess}?`);
+
+      if (response) {
+        min = guess + 1;
+      } else {
+        max = guess - 1;
+      }
+    }
+  }
+
+  result.innerText = `Sorry, I couldn't guess your number.`;
+}
