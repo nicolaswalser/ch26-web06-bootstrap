@@ -1,7 +1,6 @@
 console.log("Hello from an external script.js");
 const refName = document.getElementById("myName");
 console.log(refName);
-refName.innerHTML = "Nicolas <strong>Walser</strong>";
 
 function changeColorTo(color) {
   const refName = document.getElementById("myName");
@@ -83,3 +82,53 @@ function guessNumber() {
 
   result.innerText = `Sorry, I couldn't guess your number.`;
 }
+
+// Date
+
+const dayInput = document.getElementById("day");
+const monthInput = document.getElementById("month");
+const yearInput = document.getElementById("year");
+const resultInput = document.getElementById("result");
+const buttonCalculate = document.getElementById("calculate");
+
+const days = [
+  "Sunday",
+  "Monday",
+  "Tuesday",
+  "Wednesday",
+  "Thursday",
+  "Friday",
+  "Saturday",
+];
+
+const isWorkable = (weekDay) => {
+  switch (weekDay) {
+    case 1:
+    case 2:
+    case 3:
+    case 4:
+    case 5:
+      return "is workable";
+      break;
+    default:
+      return "is a weekend. It is not workable";
+      break;
+  }
+};
+const calculate = () => {
+  const d = new Date(yearInput.value, monthInput.value - 1, dayInput.value);
+  const dayOfTheWeek = d.getDay();
+  resultInput.value = `${
+    days[dayOfTheWeek][0] + days[dayOfTheWeek].slice(1)
+  }, ${isWorkable(dayOfTheWeek)}`;
+  console.log(`${resultInput}`);
+};
+function validateInputs(event) {
+  event.preventDefault();
+  if (yearInput.value && monthInput.value && dayInput.value) {
+    calculate();
+  } else {
+    alert("All fields need to be filled");
+  }
+}
+buttonCalculate.addEventListener("click", validateInputs);

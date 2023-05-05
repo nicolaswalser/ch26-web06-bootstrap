@@ -89,11 +89,75 @@
         </div>
       </div>
     </nav>
+    <main class="cont-general text-center min-flex">
+      <h1 class="text-center mb-4">Calculate a work day!</h1>
+      <div class="container">
+        <div class="row justify-content-center mb-4">
+          <div class="col-md-3 col-sm-12 mb-3">
+            <input
+              type="number"
+              id="day"
+              class="form-control text-center border border-5 border-warning btn btn-info"
+              placeholder="Day"
+              min="1"
+              max="31"
+              required
+            />
+          </div>
+          <div class="col-md-3 col-sm-12 mb-3">
+            <input
+              type="number"
+              id="month"
+              class="form-control text-center border border-5 border-danger btn btn-info"
+              placeholder="Month"
+              min="1"
+              max="12"
+              required
+            />
+          </div>
+          <div class="col-md-3 col-sm-12 mb-3">
+            <input
+              type="number"
+              id="year"
+              class="form-control text-center border border-5 border-success btn btn-info"
+              placeholder="Year"
+              min="1950"
+              max="2050"
+              required
+            />
+          </div>
+        </div>
+        <div class="row justify-content-center mb-4">
+          <div class="col-md-6 col-sm-12">
+            <button
+              type="submit"
+              id="calculate"
+              class="form-control text-center border border-3 rounded-pill btn btn-outline-primary"
+            >
+              Calculate
+            </button>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-md-6 col-sm-12">
+            <input
+              type="text"
+              id="result"
+              style="width: 100%; max-width: 600px"
+              class="form-control text-center border border-5"
+              placeholder="Your date!"
+              disabled
+            />
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="/assets/js/script.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
       crossorigin="anonymous"
     ></script>
-    <script src="../js/script.js"></script>
   </body>
 </html>
