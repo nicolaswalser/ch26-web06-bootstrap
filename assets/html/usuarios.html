@@ -17,7 +17,7 @@
     <link rel="icon" href="../img/bard.png" />
     <!-- Personal CSS -->
     <link rel="stylesheet" href="/assets/styles/main.css" />
-    <title>Pick a number 1 - 100</title>
+    <title>Usuarios</title>
   </head>
   <body>
     <nav class="navbar navbar-expand-sm bg-dark" data-bs-theme="dark">
@@ -94,23 +94,14 @@
         </div>
       </div>
     </nav>
-    <div class="container text-center my-5">
-      <div class="card p-3">
-        <h1 class="card-title">Guess a Number</h1>
-        <p class="card-text">
-          Think of a number between 1 and 100, and I'll try to guess it!
-        </p>
-        <button class="btn btn-primary mx-auto d-block" onclick="guessNumber()">
-          Guess
-        </button>
-        <p class="mt-3 mb-0" id="result"></p>
-      </div>
-    </div>
+    <table class="table">
+      <tbody id="data"></tbody>
+    </table>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
       crossorigin="anonymous"
     ></script>
-    <script src="/assets/js/script.js"></script>
+    <script src="/assets/js/usuariosjs.js"></script>
   </body>
 </html>
