@@ -10,7 +10,7 @@ const showData = (users) => {
     let card = `
       <div class="col">
         <div class="card">
-          <img src="${user.avatar}" class="card-img-top rounded" alt="${user.first_name} ${user.last_name}" style="max-width: 150px">
+          <img src="${user.avatar}" class="card-img-top rounded-circle" alt="${user.first_name} ${user.last_name}" style="max-width: 150px">
           <div class="card-body">
             <h5 class="card-title">${user.first_name} ${user.last_name}</h5>
             <p class="card-text">${user.email}</p>
