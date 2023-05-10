@@ -1,10 +1,23 @@
 let url = "https://reqres.in/api/users?delay=3";
+// loading screen
+
+const loaderDiv = document.getElementById("loader");
+
+const showLoader = () => {
+  loaderDiv.classList.add("show");
+};
+const hideLoader = () => {
+  loaderDiv.classList.remove("show");
+};
+showLoader();
 fetch(url)
   .then((response) => response.json())
   .then((users) => showData(users))
   .catch((error) => console.log(error));
 
 const showData = (users) => {
+  hideLoader();
+
   let cards = "";
   for (let user of users.data) {
     let card = `

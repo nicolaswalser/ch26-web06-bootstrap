@@ -22,3 +22,11 @@
   width: 150px;
   display: inline-block;
 }
+
+#loader {
+  display: none;
+}
+
+#loader.show {
+  display: block;
+}
